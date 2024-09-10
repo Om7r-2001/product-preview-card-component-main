@@ -1,0 +1,137 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,700,100,0..1&display=swap");
+/* Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  p {
+    font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --radius: 10px;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Cream);
+}
+.fraunces {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+/* Style */
+.card {
+  width: 640px;
+}
+.container {
+  display: flex;
+  background-color: var(--White);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.container > div {
+  flex-basis: calc(100% / 2);
+}
+img {
+  max-width: 100%;
+  min-height: 100%;
+}
+.info {
+  padding: 35px;
+}
+h4 {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+}
+h1 {
+  margin: 20px 0;
+  padding-right: 10px;
+  color: var(--Very-dark-blue);
+}
+p {
+  line-height: 1.7;
+  color: var(--Dark-grayish-blue);
+  font-weight: 600;
+}
+.price {
+  margin: 25px 0;
+  font-size: 40px;
+  color: var(--Dark-cyan);
+  display: flex;
+  align-items: center;
+}
+.price::after {
+  position: relative;
+  content: "$169.99";
+  font-size: 12px;
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+  margin-left: 15px;
+}
+a.buy {
+  display: block;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  padding: 15px 0;
+  text-align: center;
+  font-weight: 700;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+a.buy::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f07a";
+  margin-right: 10px;
+  font-weight: 900;
+}
+a.buy:hover {
+  background-color: var(--Very-dark-blue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 30px 0 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  img[alt="mobile"] {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  img[alt="desktop"] {
+    display: none;
+  }
+  .card {
+    width: 375px;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
